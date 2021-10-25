@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La imatge de la música</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            font-family: var(--andanapro);
+            text-transform: uppercase;
+            color: var(--blau);
+            margin: 20px;
+        }
+        :root{
+            --blau: #14213d;
+            --groc: #fca311;
+            --gris: #e5e5e5;
+            --opensans: 'Open Sans', sans-serif;
+            --andanapro: 'Andada Pro', serif;
+            --negrita: 700;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            display: flex;
+            padding: 50px 0;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--groc);
+        }
+        h1{
+            font-family: var(--opensans);
+            font-weight: var(--negrita);
+            color: white;
+        }
+        h2{
+            font-family: var(--andanapro);
+            color: white;
+        }
+        h3{
+            font-family: var(--opensans);
+        }
+        section:first-child{
+            height: 80vh;
+            background-color: var(--blau);
+            color: white;
+        }
+        section:last-child{
+            height: 80vh;
+            background-color: var(--gris);
+            color: var(--blau);
+        }
+        footer{
+            height: 50vh;
+            background-color: var(--groc);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+                <h1>La imatge de la música</h1>
+                <h2>Col·lecció gràfica dels dissenys i dissenyadors que dissenyen i posen imatge als sons</h2>
+            </hgroup>
+            <nav>
+                <a href="#portades">portades</a>
+                <a href="#dissenyadorxs">dissenyadorxs</a>
+                <a href="#xxss">xxss</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section id="#portades">
+                <h3>portades</h3>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="" alt="">
+                    </div>
+                    <header>
+                        <h3></h3>
+                    </header>
+                </div>
+            </section>
+            <section id="#dissenyadorxs">
+                <h3>dissenyadorxs</h3>
+            </section>
+        </div>
+    </main>
+    <footer id="#xxss">
+        <div class="container">
+            <h3>xxss</h3>
+        </div>
+    </footer>
+</body>
+</html>
