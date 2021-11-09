@@ -45,8 +45,20 @@
             height: 100vh;
             background-color: var(--groc);
         }
+        header .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        hgroup{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
         h1{
             font-size: 1.5em;
+            margin: 0 0 2em 0;
             font-family: var(--opensans);
             font-weight: var(--negrita);
             color: white;
@@ -55,57 +67,97 @@
             font-size: 1em;
             font-family: var(--andanapro);
             color: white;
+            width: 50%;
         }
         h3{
             font-family: var(--opensans);
         }
+        nav{
+            display: flex;
+            padding: 1em 3em;
+            width: 100%;
+            justify-content: space-between;
+        }
         nav a{
             font-size: 0.75em;
         }
-        section:first-child{
+        section:first-child .container{
             height: 100%;
+            display: flex;
+            flex-wrap: wrap;
             background-color: var(--blau);
             color: white;
         }
-        section:first-child .container{
+        section:last-child .container{
             display: flex;
+            flex-wrap: wrap;
         }
+        /*CARD PORTADES*/
         .cover{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 100%;
-            max-width: 250px;
-            height: 300px;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            min-width: 300px;
+            max-width: 678px;
+            min-height: 350px;
             padding: 0.5em;
             margin: 0.3em;
             background-color: var(--gris);
         }
         .cover .cover_img{
-            width:100%;
-            max-height:200px;
-            background: coral;
-            flex-grow: 1;
+            display: flex;
+            width: 100%;
+            height: 200px;
         }
         .cover .cover_img img{
-           object-fit: cover;
-           flex-grow: 1;
+            object-fit: cover;
+            object-position: bottom;
         }
         .cover header{
+            width: 100%;
             background-color: yellow;
             display: flex;
-            flex-direction: row;
+            height: 50px;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
         }
         .cover h3{
             font-family: var(--andanapro);
             font-size: 0.5em;
             color: var(--blau);
         }
+        /*CARD DISSENYADORS*/
+        .card_dissenyadors{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+            align-items: center;
+            width: 300px;
+            box-shadow: var(--blau) 0px 0px 15px;
+        }
+        .dissenyadors_img{
+            width: 250px;
+            height: 250px;
+        }
+        .dissenyadors_img img{
+            border-radius: 250px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card_dissenyadors header{
+            margin: 0.75em 0 0 0;
+            text-align: center;
+        }
+
         section:last-child{
-            height: 80vh;
+            height: 100%;
             background-color: var(--gris);
             color: var(--blau);
         }
@@ -114,13 +166,70 @@
             background-color: var(--groc);
             color: white;
         }
-        /* @media (max-width:500px){
+        footer .container{
+            display: flex;
+        }
+        footer p{
+            width: 17%;
+            background-color:yellow;
+        }
+        footer p:last-child{
+            margin-left: 34%;
+            background-color: var(--gris);
+        }
+
+        footer p a{
+            font-family: var(--opensans);
+            text-transform: capitalize;
+            font-size: 0.75em;
+        }
+
+
+        /* @media (max-width:550px){
             html{
                 font-size:20px;
-               
             }
             h1{
                 color:green;
+            }
+            section:first-child .container{
+                flex-direction: column;
+            }
+            .cover{
+                display: flex;
+                align-items: center;
+                width: 500px;
+                height: 450px;
+                background-color: crimson;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .cover_img{
+                padding: 0;
+                width: 100%;
+                height: 300px;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: darkgoldenrod;
+            }
+            .cover_img img{
+                height: 250px;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .cover header{
+                display: flex;
+                width: 50%;
+                height: 100%;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+            }
+            .cover header h3{
+                font-size: 1.5em;
+                text-align: center;
             }
         } */
     </style>
@@ -153,18 +262,42 @@
                     </div>
                     <div class="cover">
                         <div class="cover_img">
-                            <img src="img/designers/ryder_pipps.jpeg" alt="">
+                            <img src="img/covers/indigo.jpeg" alt="">
                         </div>
                         <header>
-                            <h3>Martin Reward</h3>
+                            <h3>Indigo</h3>
                         </header>
                     </div>
                     <div class="cover">
                         <div class="cover_img">
-                            <img src="img/designers/ryder_pipps.jpeg" alt="">
+                            <img src="img/covers/indigo.jpeg" alt="">
                         </div>
                         <header>
-                            <h3>Martin Reward</h3>
+                            <h3>Indigo</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/covers/indigo.jpeg" alt="">
+                        </div>
+                        <header>
+                            <h3>Indigo</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/covers/indigo.jpeg" alt="">
+                        </div>
+                        <header>
+                            <h3>Indigo</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/covers/indigo.jpeg" alt="">
+                        </div>
+                        <header>
+                            <h3>Indigo</h3>
                         </header>
                     </div>
                 </div>
@@ -172,7 +305,39 @@
             <section id="#dissenyadorxs">
                 <h3>dissenyadorxs</h3>
                 <div class="container">
-
+                    <div class="card_dissenyadors">
+                        <div class="dissenyadors_img">
+                            <img src="img/designers/kendrick-lamar.jpeg" alt="">
+                        </div>
+                        <header>
+                            <h3>Kendrick Lamar</h3>
+                            <blockquote>
+                                “Life will put many red lights in front of you, but sometimes we must push on the gas and trust god.”
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_dissenyadors">
+                        <div class="dissenyadors_img">
+                            <img src="img/designers/rob_carmichael.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Rob Michael</h3>
+                            <blockquote>
+                                “I don’t do black music, I don’t do white music. I do everyday life music.” 
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_dissenyadors">
+                        <div class="dissenyadors_img">
+                            <img src="img/designers/ryder_pipps.jpeg" alt="">
+                        </div>
+                        <header>
+                            <h3>Ryder Pipps</h3>
+                            <blockquote>
+                                “Look at me, I’m a loser, I’m a winner, I’m good, I’m bad. I’m a sinner, I’m a killer. What I’m doing, I’m saying that I’m human 
+                            </blockquote>
+                        </header>
+                    </div>
                 </div>
             </section>
         
@@ -180,7 +345,10 @@
     <footer id="#xxss">
             <h3>xxss</h3>
             <div class="container">
-
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">E-mail</a></p>
             </div>
     </footer>
 </body>
